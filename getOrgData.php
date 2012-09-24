@@ -6,52 +6,52 @@ require_once ('phpToolkit/SforceHeaderOptions.php');
 
 
 //========================================= OPERATION 1, do some file copy / delete preparation to clear out the results of the previous time we did this
-echo shell_exec('cp /home/dpeter/sf/build_template.xml /home/dpeter/sf/build.xml');
-echo shell_exec('rm -rf /home/dpeter/sf/lists/*');
-echo shell_exec('rm -rf /home/dpeter/sf/metadata/*');
+echo shell_exec('cp /home/dreamforce/sfMetadata/build_template.xml /home/dreamforce/sfMetadata/build.xml');
+echo shell_exec('rm -rf /home/dreamforce/sfMetadata/lists/*');
+echo shell_exec('rm -rf /home/dreamforce/sfMetadata/metadata/*');
 //========================================= END OPERATION 1
 
 
 
 //========================================= OPERATION 2, get a bunch of listings via ant's listMetadata so we can parse those resulting files later in the script
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCustomField');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listAccountCriteriaBasedSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listAccountOwnerSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listAccountSharingRules');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listBusinessProcess');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCampaignCriteriaBasedSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCampaignOwnerSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCampaignSharingRules');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCaseCriteriaBasedSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCaseOwnerSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCaseSharingRules');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listContactCriteriaBasedSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listContactOwnerSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listContactSharingRules');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCustomField');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCustomObjectCriteriaBasedSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listCustomObjectSharingRules');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listFieldSet');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listLeadCriteriaBasedSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listLeadOwnerSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listLeadSharingRules');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listLetterhead');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listListView');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listNamedFilter');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listOpportunityCriteriaBasedSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listOpportunityOwnerSharingRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listOpportunitySharingRules');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listRecordType');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listSharingReason');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listValidationRule');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml listWebLink');	
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCustomField');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listAccountCriteriaBasedSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listAccountOwnerSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listAccountSharingRules');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listBusinessProcess');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCampaignCriteriaBasedSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCampaignOwnerSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCampaignSharingRules');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCaseCriteriaBasedSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCaseOwnerSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCaseSharingRules');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listContactCriteriaBasedSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listContactOwnerSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listContactSharingRules');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCustomField');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCustomObjectCriteriaBasedSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listCustomObjectSharingRules');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listFieldSet');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listLeadCriteriaBasedSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listLeadOwnerSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listLeadSharingRules');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listLetterhead');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listListView');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listNamedFilter');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listOpportunityCriteriaBasedSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listOpportunityOwnerSharingRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listOpportunitySharingRules');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listRecordType');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listSharingReason');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listValidationRule');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml listWebLink');	
 //========================================= END OPERATION 2
 
 
 
 //========================================= OPERATION 3, get some folder names via the REST API so we can get some metadata components which rely on the folder names
 //get a session ID via the REST API
-$sessionId = getSession($USERNAME, $PASSWORD);
+$sessionId = getSession();
 
 $arrReports = getReportFolders($sessionId);
 $arrDashboards = getDashboardFolders($sessionId);
@@ -88,9 +88,12 @@ $objectXML = "";
 $objectXML .= "\t<types>\r\n";
 $objectXML .= "\t\t<members>*</members>\r\n";
 
+
 foreach($arrStdObjects as $stdObj) {	
 	$objectXML .= "\t\t<members>".$stdObj."</members>\r\n";
 }
+
+
 foreach($arrCustomObjects as $custObj) {
 	$objectXML .= "\t\t<members>".$custObj."</members>\r\n";
 }
@@ -102,15 +105,15 @@ $objectXML .= "\t</types>\r\n";
 
 // we need to get these subcomponents of our objects:
 //CustomField,BusinessProcess,RecordType,WebLink,ValidationRule,NamedFilter,SharingReason,ListView,FieldSet
-$arrCustomField 	= filerToStandardObjects(parseLog("/home/dpeter/sf/lists/CustomField.log"));
-$arrBusinessProcess = parseLog("/home/dpeter/sf/lists/BusinessProcess.log");
-$arrRecordType 		= parseLog("/home/dpeter/sf/lists/RecordType.log");
-$arrWebLink 		= parseLog("/home/dpeter/sf/lists/WebLink.log");
-$arrValidationRule 	= parseLog("/home/dpeter/sf/lists/ValidationRule.log");
-$arrNamedFilter 	= parseLog("/home/dpeter/sf/lists/NamedFilter.log");
-$arrSharingReason 	= parseLog("/home/dpeter/sf/lists/SharingReason.log");
-$arrListView 		= parseLog("/home/dpeter/sf/lists/ListView.log");
-$arrFieldSet 		= parseLog("/home/dpeter/sf/lists/FieldSet.log");
+$arrCustomField 	= filerToStandardObjects(parseLog("/home/dreamforce/sfMetadata/lists/CustomField.log"));
+$arrBusinessProcess = parseLog("/home/dreamforce/sfMetadata/lists/BusinessProcess.log");
+$arrRecordType 		= parseLog("/home/dreamforce/sfMetadata/lists/RecordType.log");
+$arrWebLink 		= parseLog("/home/dreamforce/sfMetadata/lists/WebLink.log");
+$arrValidationRule 	= parseLog("/home/dreamforce/sfMetadata/lists/ValidationRule.log");
+$arrNamedFilter 	= parseLog("/home/dreamforce/sfMetadata/lists/NamedFilter.log");
+$arrSharingReason 	= parseLog("/home/dreamforce/sfMetadata/lists/SharingReason.log");
+$arrListView 		= parseLog("/home/dreamforce/sfMetadata/lists/ListView.log");
+$arrFieldSet 		= parseLog("/home/dreamforce/sfMetadata/lists/FieldSet.log");
 
 $objectSubXML = "";
 
@@ -132,27 +135,27 @@ createPackageXMLfile($completeObjectXML, "objects.xml"); //write them to the pac
 
 
 //========================================= OPERATION 5.  get any remaining components which need to be dot qualified with info we get from ant 
-$arrLetterhead 								= parseLog("/home/dpeter/sf/lists/Letterhead.log");
-$arrAccountCriteriaBasedSharingRule 		= parseLog("/home/dpeter/sf/lists/AccountCriteriaBasedSharingRule.log");
-$arrAccountOwnerSharingRule 				= parseLog("/home/dpeter/sf/lists/AccountOwnerSharingRule.log");
-$arrAccountSharingRules 					= parseLog("/home/dpeter/sf/lists/AccountSharingRules.log");
-$arrCampaignCriteriaBasedSharingRule 		= parseLog("/home/dpeter/sf/lists/CampaignCriteriaBasedSharingRule.log");
-$arrCampaignOwnerSharingRule 				= parseLog("/home/dpeter/sf/lists/CampaignOwnerSharingRule.log");
-$arrCampaignSharingRules 					= parseLog("/home/dpeter/sf/lists/CampaignSharingRules.log");
-$arrCaseCriteriaBasedSharingRule 			= parseLog("/home/dpeter/sf/lists/CaseCriteriaBasedSharingRule.log");
-$arrCaseOwnerSharingRule 					= parseLog("/home/dpeter/sf/lists/CaseOwnerSharingRule.log");
-$arrCaseSharingRules 						= parseLog("/home/dpeter/sf/lists/CaseSharingRules.log");
-$arrContactCriteriaBasedSharingRule 		= parseLog("/home/dpeter/sf/lists/ContactCriteriaBasedSharingRule.log");
-$arrContactOwnerSharingRule 				= parseLog("/home/dpeter/sf/lists/ContactOwnerSharingRule.log");
-$arrContactSharingRules 					= parseLog("/home/dpeter/sf/lists/ContactSharingRules.log");
-$arrCustomObjectCriteriaBasedSharingRule 	= parseLog("/home/dpeter/sf/lists/CustomObjectCriteriaBasedSharingRule.log");
-$arrCustomObjectSharingRules 				= parseLog("/home/dpeter/sf/lists/CustomObjectSharingRules.log");
-$arrLeadCriteriaBasedSharingRule 			= parseLog("/home/dpeter/sf/lists/LeadCriteriaBasedSharingRule.log");
-$arrLeadOwnerSharingRule 					= parseLog("/home/dpeter/sf/lists/LeadOwnerSharingRule.log");
-$arrLeadSharingRules 						= parseLog("/home/dpeter/sf/lists/LeadSharingRules.log");
-$arrOpportunityCriteriaBasedSharingRule 	= parseLog("/home/dpeter/sf/lists/OpportunityCriteriaBasedSharingRule.log");
-$arrOpportunityOwnerSharingRule 			= parseLog("/home/dpeter/sf/lists/OpportunityOwnerSharingRule.log");
-$arrOpportunitySharingRules 				= parseLog("/home/dpeter/sf/lists/OpportunitySharingRules.log");
+$arrLetterhead 								= parseLog("/home/dreamforce/sfMetadata/lists/Letterhead.log");
+$arrAccountCriteriaBasedSharingRule 		= parseLog("/home/dreamforce/sfMetadata/lists/AccountCriteriaBasedSharingRule.log");
+$arrAccountOwnerSharingRule 				= parseLog("/home/dreamforce/sfMetadata/lists/AccountOwnerSharingRule.log");
+$arrAccountSharingRules 					= parseLog("/home/dreamforce/sfMetadata/lists/AccountSharingRules.log");
+$arrCampaignCriteriaBasedSharingRule 		= parseLog("/home/dreamforce/sfMetadata/lists/CampaignCriteriaBasedSharingRule.log");
+$arrCampaignOwnerSharingRule 				= parseLog("/home/dreamforce/sfMetadata/lists/CampaignOwnerSharingRule.log");
+$arrCampaignSharingRules 					= parseLog("/home/dreamforce/sfMetadata/lists/CampaignSharingRules.log");
+$arrCaseCriteriaBasedSharingRule 			= parseLog("/home/dreamforce/sfMetadata/lists/CaseCriteriaBasedSharingRule.log");
+$arrCaseOwnerSharingRule 					= parseLog("/home/dreamforce/sfMetadata/lists/CaseOwnerSharingRule.log");
+$arrCaseSharingRules 						= parseLog("/home/dreamforce/sfMetadata/lists/CaseSharingRules.log");
+$arrContactCriteriaBasedSharingRule 		= parseLog("/home/dreamforce/sfMetadata/lists/ContactCriteriaBasedSharingRule.log");
+$arrContactOwnerSharingRule 				= parseLog("/home/dreamforce/sfMetadata/lists/ContactOwnerSharingRule.log");
+$arrContactSharingRules 					= parseLog("/home/dreamforce/sfMetadata/lists/ContactSharingRules.log");
+$arrCustomObjectCriteriaBasedSharingRule 	= parseLog("/home/dreamforce/sfMetadata/lists/CustomObjectCriteriaBasedSharingRule.log");
+$arrCustomObjectSharingRules 				= parseLog("/home/dreamforce/sfMetadata/lists/CustomObjectSharingRules.log");
+$arrLeadCriteriaBasedSharingRule 			= parseLog("/home/dreamforce/sfMetadata/lists/LeadCriteriaBasedSharingRule.log");
+$arrLeadOwnerSharingRule 					= parseLog("/home/dreamforce/sfMetadata/lists/LeadOwnerSharingRule.log");
+$arrLeadSharingRules 						= parseLog("/home/dreamforce/sfMetadata/lists/LeadSharingRules.log");
+$arrOpportunityCriteriaBasedSharingRule 	= parseLog("/home/dreamforce/sfMetadata/lists/OpportunityCriteriaBasedSharingRule.log");
+$arrOpportunityOwnerSharingRule 			= parseLog("/home/dreamforce/sfMetadata/lists/OpportunityOwnerSharingRule.log");
+$arrOpportunitySharingRules 				= parseLog("/home/dreamforce/sfMetadata/lists/OpportunitySharingRules.log");
 
 $remainingXML = "";
 
@@ -184,8 +187,8 @@ createPackageXMLfile($remainingXML, "remaining.xml"); //write them to the packag
 
 
 //========================================= OPERATION 6, run the ant jobs to retrieve the metadata we have defined
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml bulkRetrieve');
-echo shell_exec('ant -buildfile /home/dpeter/sf/build.xml bulkRetrieveFolders');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml bulkRetrieve');
+echo shell_exec('ant -buildfile /home/dreamforce/sfMetadata/build.xml bulkRetrieveFolders');
 //========================================= END OPERATION 6
 
 
@@ -206,8 +209,8 @@ which we want to push up to github:
 //=============================================================
 //remove all the files from the local github repo which aren't in the metadata repo (in case these were objects which were deleted in salesforce)
 //get the an array of each file listings, recursively.  Strip off the beginning path from each entry in the array so we can do text comparison
-$arrMetadata 	= stripBlanks(str_replace('/home/dpeter/sf/metadata', 					'', getFilesFromDir('/home/dpeter/sf/metadata')));
-$arrGit 		= stripBlanks(str_replace('/home/dpeter/sf/git/salesforce-metadata', 	'', getFilesFromDir('/home/dpeter/sf/git/salesforce-metadata')));
+$arrMetadata 	= stripBlanks(str_replace('/home/dreamforce/sfMetadata/metadata', 					'', @getFilesFromDir('/home/dreamforce/sfMetadata/metadata')));
+$arrGit 		= stripBlanks(str_replace('/home/dreamforce/sfMetadata/git/salesforce-metadata', 	'', @getFilesFromDir('/home/dreamforce/sfMetadata/git/salesforce-metadata')));
 
 //remove array entries in the /.git directory
 $arrGit = stripGit($arrGit); 
@@ -230,7 +233,7 @@ foreach ($arrGit as $gitFile) {
 //print_r($arrDeleteFromGit);
 
 foreach ($arrDeleteFromGit as $gitFile) {
-	echo shell_exec('git --git-dir=/home/dpeter/sf/git/salesforce-metadata/.git --work-tree=/home/dpeter/sf/git/salesforce-metadata/ rm -r -f /home/dpeter/sf/git/salesforce-metadata'.$gitFile);
+	echo shell_exec('git --git-dir=/home/dreamforce/sfMetadata/git/salesforce-metadata/.git --work-tree=/home/dreamforce/sfMetadata/git/salesforce-metadata/ rm -r -f /home/dreamforce/sfMetadata/git/salesforce-metadata'.$gitFile);
 }
 
 //=============================================================
@@ -240,13 +243,13 @@ foreach ($arrDeleteFromGit as $gitFile) {
 echo shell_exec('cp -R -f metadata/* git/salesforce-metadata');
 
 //add the files to the local git repo
-echo shell_exec('git --git-dir=/home/dpeter/sf/git/salesforce-metadata/.git --work-tree=/home/dpeter/sf/git/salesforce-metadata/ add /home/dpeter/sf/git/salesforce-metadata/*');
+echo shell_exec('git --git-dir=/home/dreamforce/sfMetadata/git/salesforce-metadata/.git --work-tree=/home/dreamforce/sfMetadata/git/salesforce-metadata/ add /home/dreamforce/sfMetadata/git/salesforce-metadata/*');
 
 //commit the files
-echo shell_exec('git --git-dir=/home/dpeter/sf/git/salesforce-metadata/.git --work-tree=/home/dpeter/sf/git/salesforce-metadata/ commit -m "Automated Daily Commit from SFSYNC"');
+echo shell_exec('git --git-dir=/home/dreamforce/sfMetadata/git/salesforce-metadata/.git --work-tree=/home/dreamforce/sfMetadata/git/salesforce-metadata/ commit -m "Automated Daily Commit from SFSYNC"');
 
 //push the files
-echo shell_exec('git --git-dir=/home/dpeter/sf/git/salesforce-metadata/.git --work-tree=/home/dpeter/sf/git/salesforce-metadata/ push origin master');
+echo shell_exec('git --git-dir=/home/dreamforce/sfMetadata/git/salesforce-metadata/.git --work-tree=/home/dreamforce/sfMetadata/git/salesforce-metadata/ push origin master');
 
 //========================================= END OPERATION 7
 
@@ -429,7 +432,7 @@ function getCustomFieldsFromObjectRaw($arrObject) {
 }
 
 function getObjectInfoRaw($objectName, $access_token) {
-    $url = "https://ssl.salesforce.com/services/data/v24.0/sobjects/".$objectName."/describe/";
+    $url = "https://".SFURL."/services/data/v24.0/sobjects/".$objectName."/describe/";
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_HEADER, false);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -446,7 +449,7 @@ function getObjectLists($access_token) {
 	$arrReturn['standard'] = array();
 	$arrReturn['custom'] = array();
 
-    $url = "https://ssl.salesforce.com/services/data/v24.0/sobjects/";
+    $url = "https://".SFURL."/services/data/v24.0/sobjects/";
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_HEADER, false);
@@ -477,7 +480,7 @@ function getObjectLists($access_token) {
 
 function searchReplaceBuildXmlFile($search, $replace) {
 	// Open file for read and string modification 
-	$file = "/home/dpeter/sf/build.xml"; 
+	$file = "/home/dreamforce/sfMetadata/build.xml"; 
 	$fh = fopen($file, 'r'); 
 	$contents = fread($fh, filesize($file)); 
 	$new_contents = str_replace($search, $replace, $contents); 
@@ -495,18 +498,18 @@ function buildBulkRetrieve($metadataType, $arrFolders) {
 	$sReturn = '';
 	
 	foreach ($arrFolders as $value) {
-		$sReturn .= "\t\t".'<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="'.$metadataType.'" containingFolder="'.$value.'" retrieveTarget="/home/dpeter/sf/metadata"/>'."\r\n";	
+		$sReturn .= "\t\t".'<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="'.$metadataType.'" containingFolder="'.$value.'" retrieveTarget="/home/dreamforce/sfMetadata/metadata"/>'."\r\n";	
 	}
 	
 	return rtrim($sReturn);
 }
 
-function getSession($USERNAME, $PASSWORD) {
+function getSession() {
 	$sessionId = '';	
 	try {
 		$mySforceConnection = new SforcePartnerClient();
 		$mySoapClient = $mySforceConnection->createConnection('phpToolkit/partner.wsdl.xml');
-		$mylogin = $mySforceConnection->login($USERNAME, $PASSWORD);
+		$mylogin = $mySforceConnection->login(USERNAME, PASSWORD);
 		$sessionId = $mylogin->sessionId;
 	} catch (Exception $e) {
 		print_r($mySforceConnection->getLastRequest());
@@ -520,7 +523,7 @@ function getReportFolders($access_token) {
 	$arrReturn = array();
 
     $query = "SELECT Id, DeveloperName FROM Folder WHERE Type='Report' AND DeveloperName != ''";
-    $url = "https://ssl.salesforce.com/services/data/v20.0/query?q=" . urlencode($query);
+    $url = "https://".SFURL."/services/data/v20.0/query?q=" . urlencode($query);
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_HEADER, false);
@@ -544,7 +547,7 @@ function getDashboardFolders($access_token) {
 	$arrReturn = array();
 
     $query = "SELECT Id, DeveloperName FROM Folder WHERE Type='Dashboard' AND DeveloperName != ''";
-    $url = "https://ssl.salesforce.com/services/data/v20.0/query?q=" . urlencode($query);
+    $url = "https://".SFURL."/services/data/v20.0/query?q=" . urlencode($query);
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_HEADER, false);
@@ -569,7 +572,7 @@ function getDocumentFolders($access_token) {
 	$arrReturn = array();
 
     $query = "SELECT Id, DeveloperName FROM Folder WHERE Type='Document' AND DeveloperName != ''";
-    $url = "https://ssl.salesforce.com/services/data/v20.0/query?q=" . urlencode($query);
+    $url = "https://".SFURL."/services/data/v20.0/query?q=" . urlencode($query);
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_HEADER, false);
@@ -594,7 +597,7 @@ function getEmailTemplateFolders($access_token) {
 	$arrReturn = array();
 
     $query = "SELECT Id, DeveloperName FROM Folder WHERE Type='Email' AND DeveloperName != ''";
-    $url = "https://ssl.salesforce.com/services/data/v20.0/query?q=" . urlencode($query);
+    $url = "https://".SFURL."/services/data/v20.0/query?q=" . urlencode($query);
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_HEADER, false);
@@ -623,7 +626,7 @@ function getFilesFromDir($dir) {
         if ($file != "." && $file != "..") { 
             if(is_dir($dir.'/'.$file)) { 
                 $dir2 = $dir.'/'.$file; 
-                $files[] = getFilesFromDir($dir2); 
+                $files[] = @getFilesFromDir($dir2); 
             } 
             else { 
               $files[] = $dir.'/'.$file; 
@@ -632,7 +635,7 @@ function getFilesFromDir($dir) {
     } 
     closedir($handle); 
   }
-  return array_flat($files); 
+  return @array_flat($files); 
 } 
 
 function array_flat($array) { 

@@ -1,4 +1,4 @@
-<project name="Sample usage of Salesforce Ant tasks" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
+<project name="Get Metatdata Dreamforce Session" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
 
     <property file="build.properties"/>
     <property environment="env"/>	
@@ -21,39 +21,39 @@
 <!-- custom / standard object subcomponents -->
 
 	<target name="listCustomField">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomField" resultFilePath="/home/dpeter/sf/lists/CustomField.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomField" resultFilePath="${sf.dir}/lists/CustomField.log"/>
 	</target>
 
 	<target name="listBusinessProcess">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="BusinessProcess" resultFilePath="/home/dpeter/sf/lists/BusinessProcess.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="BusinessProcess" resultFilePath="${sf.dir}/lists/BusinessProcess.log"/>
 	</target>
 
 	<target name="listRecordType">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="RecordType" resultFilePath="/home/dpeter/sf/lists/RecordType.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="RecordType" resultFilePath="${sf.dir}/lists/RecordType.log"/>
 	</target>
 
 	<target name="listWebLink">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="WebLink" resultFilePath="/home/dpeter/sf/lists/WebLink.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="WebLink" resultFilePath="${sf.dir}/lists/WebLink.log"/>
 	</target>
 
 	<target name="listValidationRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ValidationRule" resultFilePath="/home/dpeter/sf/lists/ValidationRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ValidationRule" resultFilePath="${sf.dir}/lists/ValidationRule.log"/>
 	</target>
 
 	<target name="listNamedFilter">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="NamedFilter" resultFilePath="/home/dpeter/sf/lists/NamedFilter.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="NamedFilter" resultFilePath="${sf.dir}/lists/NamedFilter.log"/>
 	</target>
 
 	<target name="listSharingReason">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="SharingReason" resultFilePath="/home/dpeter/sf/lists/SharingReason.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="SharingReason" resultFilePath="${sf.dir}/lists/SharingReason.log"/>
 	</target>
 
 	<target name="listListView">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ListView" resultFilePath="/home/dpeter/sf/lists/ListView.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ListView" resultFilePath="${sf.dir}/lists/ListView.log"/>
 	</target>
 
 	<target name="listFieldSet">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="FieldSet" resultFilePath="/home/dpeter/sf/lists/FieldSet.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="FieldSet" resultFilePath="${sf.dir}/lists/FieldSet.log"/>
 	</target>
 
 <!-- end custom / standard object subcomponents -->
@@ -62,142 +62,144 @@
 <!-- other, non wildcard components -->
 
 	<target name="listLetterhead">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Letterhead" resultFilePath="/home/dpeter/sf/lists/Letterhead.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Letterhead" resultFilePath="${sf.dir}/lists/Letterhead.log"/>
 	</target>
 
 	<target name="listLeadSharingRules">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="LeadSharingRules" resultFilePath="/home/dpeter/sf/lists/LeadSharingRules.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="LeadSharingRules" resultFilePath="${sf.dir}/lists/LeadSharingRules.log"/>
 	</target>
 
 	<target name="listLeadOwnerSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="LeadOwnerSharingRule" resultFilePath="/home/dpeter/sf/lists/LeadOwnerSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="LeadOwnerSharingRule" resultFilePath="${sf.dir}/lists/LeadOwnerSharingRule.log"/>
 	</target>
 
 	<target name="listLeadCriteriaBasedSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="LeadCriteriaBasedSharingRule" resultFilePath="/home/dpeter/sf/lists/LeadCriteriaBasedSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="LeadCriteriaBasedSharingRule" resultFilePath="${sf.dir}/lists/LeadCriteriaBasedSharingRule.log"/>
 	</target>
 
 	<target name="listCampaignSharingRules">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CampaignSharingRules" resultFilePath="/home/dpeter/sf/lists/CampaignSharingRules.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CampaignSharingRules" resultFilePath="${sf.dir}/lists/CampaignSharingRules.log"/>
 	</target>
 
 	<target name="listCampaignOwnerSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CampaignOwnerSharingRule" resultFilePath="/home/dpeter/sf/lists/CampaignOwnerSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CampaignOwnerSharingRule" resultFilePath="${sf.dir}/lists/CampaignOwnerSharingRule.log"/>
 	</target>
 
 	<target name="listCampaignCriteriaBasedSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CampaignCriteriaBasedSharingRule" resultFilePath="/home/dpeter/sf/lists/CampaignCriteriaBasedSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CampaignCriteriaBasedSharingRule" resultFilePath="${sf.dir}/lists/CampaignCriteriaBasedSharingRule.log"/>
 	</target>
 
 	<target name="listCaseSharingRules">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CaseSharingRules" resultFilePath="/home/dpeter/sf/lists/CaseSharingRules.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CaseSharingRules" resultFilePath="${sf.dir}/lists/CaseSharingRules.log"/>
 	</target>
 
 	<target name="listCaseOwnerSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CaseOwnerSharingRule" resultFilePath="/home/dpeter/sf/lists/CaseOwnerSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CaseOwnerSharingRule" resultFilePath="${sf.dir}/lists/CaseOwnerSharingRule.log"/>
 	</target>
 
 	<target name="listCaseCriteriaBasedSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CaseCriteriaBasedSharingRule" resultFilePath="/home/dpeter/sf/lists/CaseCriteriaBasedSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CaseCriteriaBasedSharingRule" resultFilePath="${sf.dir}/lists/CaseCriteriaBasedSharingRule.log"/>
 	</target>
 
 	<target name="listContactSharingRules">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ContactSharingRules" resultFilePath="/home/dpeter/sf/lists/ContactSharingRules.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ContactSharingRules" resultFilePath="${sf.dir}/lists/ContactSharingRules.log"/>
 	</target>
 
 	<target name="listContactOwnerSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ContactOwnerSharingRule" resultFilePath="/home/dpeter/sf/lists/ContactOwnerSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ContactOwnerSharingRule" resultFilePath="${sf.dir}/lists/ContactOwnerSharingRule.log"/>
 	</target>
 
 	<target name="listContactCriteriaBasedSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ContactCriteriaBasedSharingRule" resultFilePath="/home/dpeter/sf/lists/ContactCriteriaBasedSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ContactCriteriaBasedSharingRule" resultFilePath="${sf.dir}/lists/ContactCriteriaBasedSharingRule.log"/>
 	</target>
 
 	<target name="listOpportunitySharingRules">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="OpportunitySharingRules" resultFilePath="/home/dpeter/sf/lists/OpportunitySharingRules.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="OpportunitySharingRules" resultFilePath="${sf.dir}/lists/OpportunitySharingRules.log"/>
 	</target>
 
 	<target name="listOpportunityOwnerSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="OpportunityOwnerSharingRule" resultFilePath="/home/dpeter/sf/lists/OpportunityOwnerSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="OpportunityOwnerSharingRule" resultFilePath="${sf.dir}/lists/OpportunityOwnerSharingRule.log"/>
 	</target>
 
 	<target name="listOpportunityCriteriaBasedSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="OpportunityCriteriaBasedSharingRule" resultFilePath="/home/dpeter/sf/lists/OpportunityCriteriaBasedSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="OpportunityCriteriaBasedSharingRule" resultFilePath="${sf.dir}/lists/OpportunityCriteriaBasedSharingRule.log"/>
 	</target>
 
 	<target name="listAccountSharingRules">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="AccountSharingRules" resultFilePath="/home/dpeter/sf/lists/AccountSharingRules.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="AccountSharingRules" resultFilePath="${sf.dir}/lists/AccountSharingRules.log"/>
 	</target>
 
 	<target name="listAccountOwnerSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="AccountOwnerSharingRule" resultFilePath="/home/dpeter/sf/lists/AccountOwnerSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="AccountOwnerSharingRule" resultFilePath="${sf.dir}/lists/AccountOwnerSharingRule.log"/>
 	</target>
 
 	<target name="listAccountCriteriaBasedSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="AccountCriteriaBasedSharingRule" resultFilePath="/home/dpeter/sf/lists/AccountCriteriaBasedSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="AccountCriteriaBasedSharingRule" resultFilePath="${sf.dir}/lists/AccountCriteriaBasedSharingRule.log"/>
 	</target>
 
 	<target name="listCustomObjectSharingRules">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomObjectSharingRules" resultFilePath="/home/dpeter/sf/lists/CustomObjectSharingRules.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomObjectSharingRules" resultFilePath="${sf.dir}/lists/CustomObjectSharingRules.log"/>
 	</target>
 
 	<!-- this one errors out, not an important one anyway
 	<target name="listCustomObjectOwnerSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomObjectOwnerSharingRule" resultFilePath="/home/dpeter/sf/lists/CustomObjectOwnerSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomObjectOwnerSharingRule" resultFilePath="${sf.dir}/lists/CustomObjectOwnerSharingRule.log"/>
 	</target>
 	-->
 
 	<target name="listCustomObjectCriteriaBasedSharingRule">
-	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomObjectCriteriaBasedSharingRule" resultFilePath="/home/dpeter/sf/lists/CustomObjectCriteriaBasedSharingRule.log"/>
+	  <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomObjectCriteriaBasedSharingRule" resultFilePath="${sf.dir}/lists/CustomObjectCriteriaBasedSharingRule.log"/>
 	</target>
 	
 <!-- end other, non wildcard components -->	
 	
 	<target name="bulkRetrieve">				
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexClass" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexComponent" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexPage" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexTrigger" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomApplication" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomLabels" retrieveTarget="/home/dpeter/sf/metadata"/>		
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomObjectTranslation" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomPageWebLink" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomSite" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomTab" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="DataCategoryGroup" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="FieldSet" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Flow" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Group" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="HomePageComponent" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="HomePageLayout" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Layout" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="PermissionSet" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Portal" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Profile" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Queue" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="RecordType" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="RemoteSiteSetting" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ReportType" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Role" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Scontrol" retrieveTarget="/home/dpeter/sf/metadata"/>
-		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Workflow" retrieveTarget="/home/dpeter/sf/metadata"/>		
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexClass" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexComponent" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexPage" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexTrigger" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomApplication" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomLabels" retrieveTarget="${sf.dir}/metadata"/>		
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomObjectTranslation" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomPageWebLink" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomSite" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomTab" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="DataCategoryGroup" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="FieldSet" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Flow" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Group" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="HomePageComponent" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="HomePageLayout" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Layout" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="PermissionSet" retrieveTarget="${sf.dir}/metadata"/>
+		<!--
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Portal" retrieveTarget="${sf.dir}/metadata"/>
+		-->
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Profile" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Queue" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="RecordType" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="RemoteSiteSetting" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ReportType" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Role" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Scontrol" retrieveTarget="${sf.dir}/metadata"/>
+		<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Workflow" retrieveTarget="${sf.dir}/metadata"/>		
 		
 		
 		<!-- crank up the pollWaitMillis / maxPoll on the static resources, since they are large, binary files -->		
-		<sf:bulkRetrieve pollWaitMillis="30000" maxPoll="100" username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="StaticResource" retrieveTarget="/home/dpeter/sf/metadata"/>		
+		<sf:bulkRetrieve pollWaitMillis="30000" maxPoll="100" username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="StaticResource" retrieveTarget="${sf.dir}/metadata"/>		
 		
 		<!-- get the custom objects based on a package.xml file since we have to dot qualify all the extra metadata on these -->		
-		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="/home/dpeter/sf/metadata" unpackaged="/home/dpeter/sf/objects.xml"/>		
+		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="${sf.dir}/metadata" unpackaged="${sf.dir}/objects.xml"/>		
 
 		<!-- get the remaining componenets based on a package.xml file since we have to dot qualify all the extra metadata on these -->		
-		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="/home/dpeter/sf/metadata" unpackaged="/home/dpeter/sf/remaining.xml"/>		
+		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="${sf.dir}/metadata" unpackaged="${sf.dir}/remaining.xml"/>		
 		
 		<!-- 
-		ERROR (api version issue, try again with new release) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ArticleType" retrieveTarget="/home/dpeter/sf/metadata"/>
-		ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="EntitlementTemplate" retrieveTarget="/home/dpeter/sf/metadata"/>
-		ERROR (api version issue, try again with new release)<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="rules" retrieveTarget="/home/dpeter/sf/metadata"/>
-		ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Territory" retrieveTarget="/home/dpeter/sf/metadata"/>
-		ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Translations" retrieveTarget="/home/dpeter/sf/metadata"/>
+		ERROR (api version issue, try again with new release) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ArticleType" retrieveTarget="${sf.dir}/metadata"/>
+		ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="EntitlementTemplate" retrieveTarget="${sf.dir}/metadata"/>
+		ERROR (api version issue, try again with new release)<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="rules" retrieveTarget="${sf.dir}/metadata"/>
+		ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Territory" retrieveTarget="${sf.dir}/metadata"/>
+		ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Translations" retrieveTarget="${sf.dir}/metadata"/>
 		-->
 
 

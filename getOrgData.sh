@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/dpeter/sf
+cd /home/dreamforce/sf
 php getOrgData.php > logs/log.txt
